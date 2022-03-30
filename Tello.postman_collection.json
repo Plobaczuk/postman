@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "6b40a6e6-2bf0-4495-8b97-dad214fc15c8",
+		"name": "Tello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Wszystkie tablice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/members/me/boards",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get board info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/:idBoard",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						":idBoard"
+					],
+					"variable": [
+						{
+							"key": "idBoard",
+							"value": "62434890d318b76e96c38d88"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?key={{key}}&token={{token}}&name=nowa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						},
+						{
+							"key": "name",
+							"value": "nowa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/:Id?key={{key}}&token={{token}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						":Id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "Id",
+							"value": "6243523f14ed951f32e7dc3e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth1",
+		"oauth1": [
+			{
+				"key": "consumerKey",
+				"value": "a3a16b794cec30e358b7974a93bd8cde",
+				"type": "string"
+			},
+			{
+				"key": "tokenSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "consumerSecret",
+				"value": "81277e13a699d0578c9f432ec4204cdec1e69d588d8fc3083b3ed0f7637ffc1e",
+				"type": "string"
+			},
+			{
+				"key": "token",
+				"value": "94b0c23d337c0748b749cee5b53292abf1476e3fd5d99f5658a0ce9cb3da83e2",
+				"type": "string"
+			},
+			{
+				"key": "signatureMethod",
+				"value": "HMAC-SHA1",
+				"type": "string"
+			},
+			{
+				"key": "version",
+				"value": "1.0",
+				"type": "string"
+			},
+			{
+				"key": "addParamsToHeader",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "addEmptyParamsToSign",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "key",
+			"value": "a3a16b794cec30e358b7974a93bd8cde",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "94b0c23d337c0748b749cee5b53292abf1476e3fd5d99f5658a0ce9cb3da83e2",
+			"type": "string"
+		}
+	]
+}
